@@ -31,16 +31,26 @@ Emergency lane gets Green until vehicle passes or override is released.
 After priority phase, system resumes normal cycle.
 
 4.Verilog Module Coding
+    
     module traffic_light_controller (
+    
     input clk,
+    
     input reset,
+    
     input emergency,             // Emergency detected (sensor/switch)
+    
     input [3:0] car_present,     // Sensors for each direction
+    
     output [2:0] lights_ns,      // North-South lights (Red-Yellow-Green)
-    output [2:0] lights_ew       // East-West lights (Red-Yellow-Green)
-);
+    
+    
+    output [2:0] lights_ew       // East-West lights (Red-Yellow-Green));
+
 // Internal registers, FSM states, counters, etc.
+
 // FSM logic for regular and emergency override
+
 endmodule
 
 5. Emergency Detection Mechanism
